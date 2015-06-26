@@ -12,6 +12,10 @@
 		3441E9511B3D014D00E0A016 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3441E9501B3D014D00E0A016 /* Images.xcassets */; };
 		3441E9541B3D014D00E0A016 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3441E9521B3D014D00E0A016 /* LaunchScreen.xib */; };
 		3441E9601B3D014D00E0A016 /* LianMengTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E95F1B3D014D00E0A016 /* LianMengTests.m */; };
+		3441E9701B3D024C00E0A016 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E96F1B3D024C00E0A016 /* MessageViewController.m */; };
+		3441E9741B3D027000E0A016 /* HearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9731B3D027000E0A016 /* HearViewController.m */; };
+		3441E9771B3D028200E0A016 /* StrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9761B3D028200E0A016 /* StrategyViewController.m */; };
+		3441E97A1B3D028F00E0A016 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9791B3D028F00E0A016 /* SetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,14 @@
 		3441E9591B3D014D00E0A016 /* LianMengTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LianMengTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3441E95E1B3D014D00E0A016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3441E95F1B3D014D00E0A016 /* LianMengTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LianMengTests.m; sourceTree = "<group>"; };
+		3441E96E1B3D024C00E0A016 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		3441E96F1B3D024C00E0A016 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		3441E9721B3D027000E0A016 /* HearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HearViewController.h; sourceTree = "<group>"; };
+		3441E9731B3D027000E0A016 /* HearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HearViewController.m; sourceTree = "<group>"; };
+		3441E9751B3D028200E0A016 /* StrategyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrategyViewController.h; sourceTree = "<group>"; };
+		3441E9761B3D028200E0A016 /* StrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategyViewController.m; sourceTree = "<group>"; };
+		3441E9781B3D028E00E0A016 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		3441E9791B3D028F00E0A016 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +88,11 @@
 		3441E9481B3D014D00E0A016 /* LianMeng */ = {
 			isa = PBXGroup;
 			children = (
+				3441E97C1B3D02A200E0A016 /* General */,
+				3441E9691B3D016100E0A016 /* AppDeleGata */,
 				3441E94D1B3D014D00E0A016 /* AppDelegate.h */,
 				3441E94E1B3D014D00E0A016 /* AppDelegate.m */,
+				3441E96D1B3D01FB00E0A016 /* Controller */,
 				3441E9501B3D014D00E0A016 /* Images.xcassets */,
 				3441E9521B3D014D00E0A016 /* LaunchScreen.xib */,
 				3441E9491B3D014D00E0A016 /* Supporting Files */,
@@ -109,6 +124,51 @@
 				3441E95E1B3D014D00E0A016 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3441E9691B3D016100E0A016 /* AppDeleGata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppDeleGata;
+			sourceTree = "<group>";
+		};
+		3441E96D1B3D01FB00E0A016 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3441E96E1B3D024C00E0A016 /* MessageViewController.h */,
+				3441E96F1B3D024C00E0A016 /* MessageViewController.m */,
+				3441E9711B3D025800E0A016 /* message */,
+				3441E9721B3D027000E0A016 /* HearViewController.h */,
+				3441E9731B3D027000E0A016 /* HearViewController.m */,
+				3441E97B1B3D029800E0A016 /* Hear */,
+				3441E9751B3D028200E0A016 /* StrategyViewController.h */,
+				3441E9761B3D028200E0A016 /* StrategyViewController.m */,
+				3441E9781B3D028E00E0A016 /* SetViewController.h */,
+				3441E9791B3D028F00E0A016 /* SetViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3441E9711B3D025800E0A016 /* message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
+		3441E97B1B3D029800E0A016 /* Hear */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Hear;
+			sourceTree = "<group>";
+		};
+		3441E97C1B3D02A200E0A016 /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3441E9771B3D028200E0A016 /* StrategyViewController.m in Sources */,
+				3441E9701B3D024C00E0A016 /* MessageViewController.m in Sources */,
 				3441E94F1B3D014D00E0A016 /* AppDelegate.m in Sources */,
+				3441E9741B3D027000E0A016 /* HearViewController.m in Sources */,
 				3441E94C1B3D014D00E0A016 /* main.m in Sources */,
+				3441E97A1B3D028F00E0A016 /* SetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = LianMeng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = LianMeng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
