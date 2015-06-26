@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MessageView.h"
+
 @interface MessageViewController : UIViewController
+//@property (nonatomic, retain) UIButton *newButton;
+@property (nonatomic, retain) MessageView *messageView;
 
 @end

@@ -16,6 +16,18 @@
 		3441E9741B3D027000E0A016 /* HearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9731B3D027000E0A016 /* HearViewController.m */; };
 		3441E9771B3D028200E0A016 /* StrategyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9761B3D028200E0A016 /* StrategyViewController.m */; };
 		3441E97A1B3D028F00E0A016 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9791B3D028F00E0A016 /* SetViewController.m */; };
+		3441E97F1B3D2C9000E0A016 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E97E1B3D2C9000E0A016 /* MessageView.m */; };
+		3441E9871B3D2E8D00E0A016 /* Competition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9861B3D2E8D00E0A016 /* Competition.m */; };
+		3441E98A1B3D2EAB00E0A016 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9891B3D2EAB00E0A016 /* Video.m */; };
+		3441E98D1B3D2F0F00E0A016 /* Recreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E98C1B3D2F0F00E0A016 /* Recreation.m */; };
+		3441E9991B3D4A0400E0A016 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9901B3D4A0400E0A016 /* EGOCache.m */; };
+		3441E99A1B3D4A0400E0A016 /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9921B3D4A0400E0A016 /* EGOImageButton.m */; };
+		3441E99B1B3D4A0400E0A016 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9941B3D4A0400E0A016 /* EGOImageLoadConnection.m */; };
+		3441E99C1B3D4A0400E0A016 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9961B3D4A0400E0A016 /* EGOImageLoader.m */; };
+		3441E99D1B3D4A0400E0A016 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9981B3D4A0400E0A016 /* EGOImageView.m */; };
+		3441E9A11B3D4C2100E0A016 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9A01B3D4C2100E0A016 /* ItemCell.m */; };
+		3441E9A81B3D50B900E0A016 /* NetworkEngine1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9A71B3D50B900E0A016 /* NetworkEngine1.m */; };
+		3441E9AB1B3D6F5900E0A016 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3441E9AA1B3D6F5900E0A016 /* ItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,31 @@
 		3441E9761B3D028200E0A016 /* StrategyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrategyViewController.m; sourceTree = "<group>"; };
 		3441E9781B3D028E00E0A016 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		3441E9791B3D028F00E0A016 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		3441E97D1B3D2C9000E0A016 /* MessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageView.h; sourceTree = "<group>"; };
+		3441E97E1B3D2C9000E0A016 /* MessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageView.m; sourceTree = "<group>"; };
+		3441E9851B3D2E8C00E0A016 /* Competition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Competition.h; sourceTree = "<group>"; };
+		3441E9861B3D2E8D00E0A016 /* Competition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Competition.m; sourceTree = "<group>"; };
+		3441E9881B3D2EAB00E0A016 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		3441E9891B3D2EAB00E0A016 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		3441E98B1B3D2F0F00E0A016 /* Recreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recreation.h; sourceTree = "<group>"; };
+		3441E98C1B3D2F0F00E0A016 /* Recreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recreation.m; sourceTree = "<group>"; };
+		3441E98F1B3D4A0400E0A016 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
+		3441E9901B3D4A0400E0A016 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
+		3441E9911B3D4A0400E0A016 /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
+		3441E9921B3D4A0400E0A016 /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
+		3441E9931B3D4A0400E0A016 /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
+		3441E9941B3D4A0400E0A016 /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
+		3441E9951B3D4A0400E0A016 /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
+		3441E9961B3D4A0400E0A016 /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
+		3441E9971B3D4A0400E0A016 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
+		3441E9981B3D4A0400E0A016 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
+		3441E99F1B3D4C2100E0A016 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		3441E9A01B3D4C2100E0A016 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		3441E9A21B3D4D0900E0A016 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3441E9A61B3D50B900E0A016 /* NetworkEngine1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine1.h; sourceTree = "<group>"; };
+		3441E9A71B3D50B900E0A016 /* NetworkEngine1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine1.m; sourceTree = "<group>"; };
+		3441E9A91B3D6F5900E0A016 /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		3441E9AA1B3D6F5900E0A016 /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +125,12 @@
 		3441E9481B3D014D00E0A016 /* LianMeng */ = {
 			isa = PBXGroup;
 			children = (
-				3441E97C1B3D02A200E0A016 /* General */,
+				3441E9A21B3D4D0900E0A016 /* PrefixHeader.pch */,
 				3441E9691B3D016100E0A016 /* AppDeleGata */,
 				3441E94D1B3D014D00E0A016 /* AppDelegate.h */,
 				3441E94E1B3D014D00E0A016 /* AppDelegate.m */,
 				3441E96D1B3D01FB00E0A016 /* Controller */,
+				3441E97C1B3D02A200E0A016 /* General */,
 				3441E9501B3D014D00E0A016 /* Images.xcassets */,
 				3441E9521B3D014D00E0A016 /* LaunchScreen.xib */,
 				3441E9491B3D014D00E0A016 /* Supporting Files */,
@@ -153,6 +191,8 @@
 		3441E9711B3D025800E0A016 /* message */ = {
 			isa = PBXGroup;
 			children = (
+				3441E99E1B3D4BE000E0A016 /* ItemCell */,
+				3441E9811B3D2D4D00E0A016 /* View */,
 			);
 			name = message;
 			sourceTree = "<group>";
@@ -167,8 +207,54 @@
 		3441E97C1B3D02A200E0A016 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				3441E98E1B3D4A0400E0A016 /* EGOImageView */,
 			);
 			name = General;
+			sourceTree = "<group>";
+		};
+		3441E9811B3D2D4D00E0A016 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3441E97D1B3D2C9000E0A016 /* MessageView.h */,
+				3441E97E1B3D2C9000E0A016 /* MessageView.m */,
+				3441E9851B3D2E8C00E0A016 /* Competition.h */,
+				3441E9861B3D2E8D00E0A016 /* Competition.m */,
+				3441E9881B3D2EAB00E0A016 /* Video.h */,
+				3441E9891B3D2EAB00E0A016 /* Video.m */,
+				3441E98B1B3D2F0F00E0A016 /* Recreation.h */,
+				3441E98C1B3D2F0F00E0A016 /* Recreation.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3441E98E1B3D4A0400E0A016 /* EGOImageView */ = {
+			isa = PBXGroup;
+			children = (
+				3441E98F1B3D4A0400E0A016 /* EGOCache.h */,
+				3441E9901B3D4A0400E0A016 /* EGOCache.m */,
+				3441E9911B3D4A0400E0A016 /* EGOImageButton.h */,
+				3441E9921B3D4A0400E0A016 /* EGOImageButton.m */,
+				3441E9931B3D4A0400E0A016 /* EGOImageLoadConnection.h */,
+				3441E9941B3D4A0400E0A016 /* EGOImageLoadConnection.m */,
+				3441E9951B3D4A0400E0A016 /* EGOImageLoader.h */,
+				3441E9961B3D4A0400E0A016 /* EGOImageLoader.m */,
+				3441E9971B3D4A0400E0A016 /* EGOImageView.h */,
+				3441E9981B3D4A0400E0A016 /* EGOImageView.m */,
+			);
+			path = EGOImageView;
+			sourceTree = "<group>";
+		};
+		3441E99E1B3D4BE000E0A016 /* ItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				3441E99F1B3D4C2100E0A016 /* ItemCell.h */,
+				3441E9A01B3D4C2100E0A016 /* ItemCell.m */,
+				3441E9A91B3D6F5900E0A016 /* ItemModel.h */,
+				3441E9AA1B3D6F5900E0A016 /* ItemModel.m */,
+				3441E9A61B3D50B900E0A016 /* NetworkEngine1.h */,
+				3441E9A71B3D50B900E0A016 /* NetworkEngine1.m */,
+			);
+			name = ItemCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +356,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3441E9AB1B3D6F5900E0A016 /* ItemModel.m in Sources */,
 				3441E9771B3D028200E0A016 /* StrategyViewController.m in Sources */,
+				3441E98D1B3D2F0F00E0A016 /* Recreation.m in Sources */,
 				3441E9701B3D024C00E0A016 /* MessageViewController.m in Sources */,
+				3441E99D1B3D4A0400E0A016 /* EGOImageView.m in Sources */,
+				3441E9A11B3D4C2100E0A016 /* ItemCell.m in Sources */,
 				3441E94F1B3D014D00E0A016 /* AppDelegate.m in Sources */,
+				3441E99B1B3D4A0400E0A016 /* EGOImageLoadConnection.m in Sources */,
+				3441E98A1B3D2EAB00E0A016 /* Video.m in Sources */,
+				3441E9871B3D2E8D00E0A016 /* Competition.m in Sources */,
 				3441E9741B3D027000E0A016 /* HearViewController.m in Sources */,
+				3441E9A81B3D50B900E0A016 /* NetworkEngine1.m in Sources */,
+				3441E99C1B3D4A0400E0A016 /* EGOImageLoader.m in Sources */,
+				3441E97F1B3D2C9000E0A016 /* MessageView.m in Sources */,
+				3441E9991B3D4A0400E0A016 /* EGOCache.m in Sources */,
+				3441E99A1B3D4A0400E0A016 /* EGOImageButton.m in Sources */,
 				3441E94C1B3D014D00E0A016 /* main.m in Sources */,
 				3441E97A1B3D028F00E0A016 /* SetViewController.m in Sources */,
 			);
@@ -392,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LianMeng/PrefixHeader.pch";
 				INFOPLIST_FILE = LianMeng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -403,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LianMeng/PrefixHeader.pch";
 				INFOPLIST_FILE = LianMeng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

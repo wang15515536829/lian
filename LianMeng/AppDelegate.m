@@ -23,6 +23,39 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    // 资讯
+    MessageViewController *megssageVC = [[MessageViewController alloc] init];
+    UINavigationController *megssage = [[UINavigationController alloc] initWithRootViewController:megssageVC];
+    megssage.tabBarItem.title = @"资讯";
+    
+    
+    // 英雄
+    HearViewController *hearVC = [[HearViewController alloc] init];
+    UINavigationController *hear = [[UINavigationController alloc] initWithRootViewController:hearVC];
+    hear.tabBarItem.title = @"英雄";
+    
+    // 策略
+    StrategyViewController *strateVC = [[StrategyViewController alloc] init];
+    UINavigationController *strategy = [[UINavigationController alloc] initWithRootViewController:strateVC];
+    strategy.tabBarItem.title = @"策略";
+    
+    // 设置
+    SetViewController *setVC = [[SetViewController alloc] init];
+    UINavigationController *set = [[UINavigationController alloc] initWithRootViewController:setVC];
+    set.tabBarItem.title = @"设置";
+    
+    
+    
+    
+    // tabbar
+    UITabBarController *tabbar = [[UITabBarController alloc] init];
+    NSArray *array = @[megssage, hear, strategy, set];
+    tabbar.viewControllers = array;
+    
+    self.window.rootViewController = tabbar;
+    
+    
+    
     return YES;
 }
 
