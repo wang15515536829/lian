@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MessageViewController.h"
+#import "HearViewController.h"
+#import "StrategyViewController.h"
+#import "SetViewController.h"
 @interface AppDelegate ()
 
 @end
