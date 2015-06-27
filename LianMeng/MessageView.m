@@ -213,7 +213,7 @@
     SliderScrollView.pagingEnabled = YES;
     SliderScrollView.delegate = self;
     
-    UIView *vi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
+//    UIView *vi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
     
     
 //    self.imageView.imageURL = [NSURL URLWithString:<#(NSString *)#>]
@@ -225,22 +225,23 @@
 //        <#statements#>
 //    }
 //    
-    EGOImageView *imageView1 = [[EGOImageView alloc]init];
-    if (self.imageurls.count != 0) {
-        NSString *url1 = self.imageurls[0];
-        imageView1.imageURL = [NSURL URLWithString:url1];
-        [vi addSubview:imageView1];
-    }
+//    EGOImageView *imageView1 = [[EGOImageView alloc]init];
+//    if (self.imageurls.count != 0) {
+//        NSString *url1 = self.imageurls[0];
+//        imageView1.imageURL = [NSURL URLWithString:url1];
+//        [vi addSubview:imageView1];
+//    }
+//    self.vi = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.frame.size.width*4, 200) imageURLsGroup:self.imageurls];
+    [self.tableView.tableHeaderView addSubview:self.vi];
     
     
     
-    
-    vi.backgroundColor = [UIColor purpleColor];
+    self.vi.backgroundColor = [UIColor purpleColor];
 
     
     
     
-    [SliderScrollView addSubview:vi];
+//    [SliderScrollView addSubview:vi];
     
     // 滑动条
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(self.frame.size.width, 0, self.frame.size.width, 200)];

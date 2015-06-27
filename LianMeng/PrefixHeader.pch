@@ -22,6 +22,19 @@
 #import "ItemCell.h"
 #import "ItemModel.h"
 
+#import "NSData+SDDataCache.h"
+#import "SDCollectionViewCell.h"
+#import "SDCycleScrollView.h"
+#import "UIView+SDExtension.h"
+
+
+
+
+
+#import "TAPageControl.h"
+
+
+
 #import "NetworkEngine1.h"
 
 #define kNewURL @"http://qt.qq.com/static/pages/news/phone/c12_list_1.shtml"

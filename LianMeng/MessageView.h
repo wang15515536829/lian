@@ -29,4 +29,6 @@
 
 @property (nonatomic , retain) NSMutableArray *imageurls;
 
+@property (nonatomic, retain) UIView *vi;
+
 @end
