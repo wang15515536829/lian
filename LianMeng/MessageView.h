@@ -21,8 +21,12 @@
 @property (nonatomic, retain) NSMutableArray *array;
 @property (nonatomic, retain) NSMutableDictionary *dic;
 
+@property (nonatomic, retain) EGOImageView *imageView;
+
 @property (nonatomic, retain) Competition *competition;
 @property (nonatomic, retain) Video *video;
 @property (nonatomic, retain) Recreation *recreation;
+
+@property (nonatomic , retain) NSMutableArray *imageurls;
 
 @end

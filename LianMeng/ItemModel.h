@@ -14,6 +14,8 @@
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *summary;
 @property (nonatomic, retain) NSString *insert;
+@property (nonatomic, retain) NSString *article_id;
+@property (nonatomic, retain) NSString *channel_desc;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 

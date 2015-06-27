@@ -57,7 +57,7 @@
     
     
     // 创建 Recreation
-    self.recreation = [[Recreation alloc] initWithFrame:CGRectMake(self.frame.size.width * 3, 0, self.frame.size.width, self.frame.size.height - 30)];
+    self.recreation = [[Recreation alloc] initWithFrame:CGRectMake(self.frame.size.width * 3, 0, self.frame.size.width, self.frame.size.height)];
     self.recreation.backgroundColor = [UIColor purpleColor];
     [self.myscrollView addSubview:self.recreation];
     
@@ -90,8 +90,11 @@
 #pragma mark - 请求数据
 - (void)getDataFromUrl
 {
-    NetworkEngine1 *engin = [NetworkEngine1 netWorkEngineWithURL:[NSURL URLWithString:kNewURL] params:nil delegate:self];
-    [engin start];
+    NetworkEngine1 *engin1 = [NetworkEngine1 netWorkEngineWithURL:[NSURL URLWithString:kNewURL] params:nil delegate:self];
+    [engin1 start];
+
+    NetworkEngine1 *en = [NetworkEngine1 netWorkEngineWithURL: [NSURL URLWithString:kTuijian]params:nil delegate:self];
+    [en start];
 }
 #pragma  mark - 请求数据成功的方法
 - (void)netWorkDidFinishLoading:(NetworkEngine1 *)engine withInfo:(NSData *)data
@@ -108,8 +111,21 @@
         ItemModel *list = [[ItemModel alloc] initWithDictionary:listDic];
         [self.array addObject:list];
     }
+    for (int i = (int)(self.array.count - 4); i < self.array.count ; i++) {
+        ItemModel *model = self.array[i];
+        NSString *imageurl = model.image;
+        [self.imageurls addObject:imageurl];
+    }
     NSLog(@"------------");
     [self.tableView reloadData];
+}
+- (NSMutableArray *)imageurls
+{
+    if (!_imageurls) {
+        self.imageurls = [NSMutableArray array];
+        
+    }
+    return _imageurls;
 }
 //array的懒加载
 - (NSMutableArray *)array
@@ -129,7 +145,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.array.count;
+    return self.array.count - 4;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -140,23 +156,38 @@
         
     }
     
+
+    
+    
     ItemModel *model = [self.array objectAtIndex:indexPath.row];
+
+//    if ([model.channel_desc isEqualToString:@"推荐"]) {
+//        ;
+//    } else {
+    // title
     cell.nameLael.text = model.title;
+
+    // content
     cell.contentLabel.text = model.summary;
     
-    if ([model.insert isKindOfClass:[NSNull class]]) {
-        
+    // insert_date
+    if (![model.insert isKindOfClass:[NSNull class]]) {
+        NSString *str = [model.insert substringWithRange:NSMakeRange(6, 5)];
+        cell.publishedLabel.text = str;
+    } else {
+        cell.publishedLabel.text = [NSString stringWithFormat:@"%@", @((long)model.insert)];
     }
     
-    
-//    cell.textLabel.text = @"测试";
+    // 内容图片
+    cell.headimageView.imageURL = [NSURL URLWithString:model.image];
+//    }
     return cell;
     
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 60;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -171,7 +202,7 @@
     // 创建滑动条的ScrollView （滑动条 ）
     UIScrollView *SliderScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
     // 给ScrollView设置Content
-    SliderScrollView.contentSize = CGSizeMake(self.frame.size.width * 3, 200);
+    SliderScrollView.contentSize = CGSizeMake(self.frame.size.width * 4, 200);
     // ScrollView滑动条关闭
     SliderScrollView.showsHorizontalScrollIndicator = NO;
     
@@ -183,7 +214,32 @@
     SliderScrollView.delegate = self;
     
     UIView *vi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
+    
+    
+//    self.imageView.imageURL = [NSURL URLWithString:<#(NSString *)#>]
+//    ItemModel *model = (ItemModel *)[self.array objectAtIndex:section.]
+//    ItemCell *cell = [[ItemCell alloc] init];
+    
+//    ItemModel *model = [[ItemModel alloc] init];
+//    if ([model.channel_desc isEqualToString:@"推荐"]) {
+//        <#statements#>
+//    }
+//    
+    EGOImageView *imageView1 = [[EGOImageView alloc]init];
+    if (self.imageurls.count != 0) {
+        NSString *url1 = self.imageurls[0];
+        imageView1.imageURL = [NSURL URLWithString:url1];
+        [vi addSubview:imageView1];
+    }
+    
+    
+    
+    
     vi.backgroundColor = [UIColor purpleColor];
+
+    
+    
+    
     [SliderScrollView addSubview:vi];
     
     // 滑动条

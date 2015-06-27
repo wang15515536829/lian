@@ -127,8 +127,6 @@
 			children = (
 				3441E9A21B3D4D0900E0A016 /* PrefixHeader.pch */,
 				3441E9691B3D016100E0A016 /* AppDeleGata */,
-				3441E94D1B3D014D00E0A016 /* AppDelegate.h */,
-				3441E94E1B3D014D00E0A016 /* AppDelegate.m */,
 				3441E96D1B3D01FB00E0A016 /* Controller */,
 				3441E97C1B3D02A200E0A016 /* General */,
 				3441E9501B3D014D00E0A016 /* Images.xcassets */,
@@ -167,6 +165,8 @@
 		3441E9691B3D016100E0A016 /* AppDeleGata */ = {
 			isa = PBXGroup;
 			children = (
+				3441E94D1B3D014D00E0A016 /* AppDelegate.h */,
+				3441E94E1B3D014D00E0A016 /* AppDelegate.m */,
 			);
 			name = AppDeleGata;
 			sourceTree = "<group>";
@@ -562,6 +562,7 @@
 				3441E9651B3D014D00E0A016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3441E9661B3D014D00E0A016 /* Build configuration list for PBXNativeTarget "LianMengTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				3441E9681B3D014D00E0A016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

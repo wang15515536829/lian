@@ -25,3 +25,12 @@
 #import "NetworkEngine1.h"
 
 #define kNewURL @"http://qt.qq.com/static/pages/news/phone/c12_list_1.shtml"
+#define kTuijian @"http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml"
+#define kSaishi @"http://qt.qq.com/static/pages/news/phone/c73_list_1.shtml"
+#define kShiping @"http://qt.qq.com/static/pages/news/phone/c11_list_1.shtml"
+#define kYule @"http://qt.qq.com/static/pages/news/phone/c18_list_1.shtml"
+
+
+
+
+

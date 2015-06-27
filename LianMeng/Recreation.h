@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Recreation : UITableView
+@interface Recreation : UIView<UITableViewDataSource, UITableViewDelegate, NetworkEngineDelegate>
+
+@property (nonatomic, retain) UITableView *tableView1;
+
+@property (nonatomic, retain) NSMutableArray *array;
+
 
 @end

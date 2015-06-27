@@ -51,7 +51,7 @@
     UITabBarController *tabbar = [[UITabBarController alloc] init];
     NSArray *array = @[megssage, hear, strategy, set];
     tabbar.viewControllers = array;
-    
+    tabbar.tabBar.translucent = NO;
     self.window.rootViewController = tabbar;
     
     

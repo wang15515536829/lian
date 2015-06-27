@@ -11,17 +11,18 @@
 // 间距
 #define kInspace 5
 
-#define kHeadImageHeidght 70
-#define kHeadImageWidgth 80
+#define kHeadImageHeidght 50
+#define kHeadImageWidgth 75
 
-#define kNameLableH 30
+#define kNameLableH 22
 #define kNameLabelW 240
 
-#define kContentLabelH 40
-#define kContentLabelW 240
+#define kContentLabelH 30
+#define kContentLabelW 230
 
-#define kPudlishLabelX 195
-#define kPudlishLabelH 20
+#define kPudlishLabelY 43
+#define kPudlishLabelX 290
+#define kPudlishLabelH 17
 #define kPudlishLabelW 40
 
 @implementation ItemCell
@@ -41,10 +42,15 @@
     // 依次创建 headimageView 、nameLael 、contentLabel、publishedLabel
     self.headimageView =[[EGOImageView alloc] initWithFrame:CGRectMake(kInspace, kInspace, kHeadImageWidgth, kHeadImageHeidght)];
     self.nameLael = [[UILabel alloc] initWithFrame:CGRectMake(kInspace * 2 + kHeadImageWidgth, kInspace, kNameLabelW, kNameLableH)];
-    self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(kInspace * 2 + kHeadImageWidgth, kInspace + kNameLableH, kContentLabelW - 10, kContentLabelH)];
-    self.contentLabel.font = [UIFont systemFontOfSize:14];
+    self.nameLael.font = [UIFont systemFontOfSize:16];
+    self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(kInspace * 2 + kHeadImageWidgth, kNameLableH + 3, kContentLabelW, kContentLabelH)];
+    self.contentLabel.font = [UIFont systemFontOfSize:12];
+//    self.contentLabel.textAlignment = UIControlContentVerticalAlignmentTop;
     self.contentLabel.numberOfLines = 0;
-    self.publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPudlishLabelX , self.contentLabel.frame.size.height + kContentLabelH + kInspace, kPudlishLabelW, kPudlishLabelH)];
+    self.publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPudlishLabelX ,  + kPudlishLabelY, kPudlishLabelW , kPudlishLabelH)];
+    self.publishedLabel.font = [UIFont systemFontOfSize:11];
+//    self.publishedLabel.backgroundColor = [UIColor purpleColor];
+    
     
     [self addSubview:self.headimageView];
     [self addSubview:self.nameLael];

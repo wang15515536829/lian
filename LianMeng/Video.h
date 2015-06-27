@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Video : UITableView
+@interface Video : UIView<UITableViewDataSource, UITableViewDelegate, NetworkEngineDelegate>
+
+@property (nonatomic, retain) UITableView *tableView1;
+
+@property (nonatomic, retain) NSMutableArray *array;
 
 @end
