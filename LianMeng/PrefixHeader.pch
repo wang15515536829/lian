@@ -22,4 +22,6 @@
 #import "ItemCell.h"
 #import "ItemModel.h"
 
+#import "NetworkEngine1.h"
 
+#define kNewURL @"http://qt.qq.com/static/pages/news/phone/c12_list_1.shtml"

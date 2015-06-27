@@ -10,4 +10,29 @@
 
 @implementation ItemModel
 
+- (instancetype)initWithDictionary:(NSDictionary *)dic
+{
+    self = [super init];
+    if (self) {
+        if (![dic isKindOfClass:[NSNull class]]) {
+            self.image = dic[@"image_url_big"];
+            self.title = dic[@"title"];
+            self.summary = dic[@"summary"];
+            self.insert = dic[@"insert_date"];
+        }
+    }
+    return self;
+    
+}
+
+- (void)dealloc
+{
+    _image = nil;
+    _title = nil;
+    _summary = nil;
+    _insert = nil;
+    [super dealloc];
+}
+
+
 @end

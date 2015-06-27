@@ -82,7 +82,45 @@
     [self.myscrollView release];
     
     
+    
+    
+    // 请求数据
+    [self getDataFromUrl];
 }
+#pragma mark - 请求数据
+- (void)getDataFromUrl
+{
+    NetworkEngine1 *engin = [NetworkEngine1 netWorkEngineWithURL:[NSURL URLWithString:kNewURL] params:nil delegate:self];
+    [engin start];
+}
+#pragma  mark - 请求数据成功的方法
+- (void)netWorkDidFinishLoading:(NetworkEngine1 *)engine withInfo:(NSData *)data
+{
+    // 解析
+    NSError *error = nil;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"error%@" , error);
+    
+    NSArray *listArray = [dic objectForKey:@"list"];
+    
+    for (NSDictionary *listDic in listArray) {
+        NSLog(@"*********");
+        ItemModel *list = [[ItemModel alloc] initWithDictionary:listDic];
+        [self.array addObject:list];
+    }
+    NSLog(@"------------");
+    [self.tableView reloadData];
+}
+//array的懒加载
+- (NSMutableArray *)array
+{
+    if (!_array) {
+        self.array = [NSMutableArray array];
+        
+    }
+    return _array;
+}
+
 
 #pragma  mark - TableView的代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -91,20 +129,34 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.array.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (nil == cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
         
     }
-    cell.textLabel.text = @"测试";
+    
+    ItemModel *model = [self.array objectAtIndex:indexPath.row];
+    cell.nameLael.text = model.title;
+    cell.contentLabel.text = model.summary;
+    
+    if ([model.insert isKindOfClass:[NSNull class]]) {
+        
+    }
+    
+    
+//    cell.textLabel.text = @"测试";
     return cell;
     
     
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

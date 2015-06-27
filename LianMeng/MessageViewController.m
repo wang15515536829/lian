@@ -43,6 +43,8 @@
     
     for (int i = 0 ; i < array.count ; i++) {
         UIButton *newButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        
+        
         [newButton setTitle:array[i] forState:UIControlStateNormal];
         
         [newButton setFrame:CGRectMake(self.messageView.frame.size.width / (array.count)*(i),0, 75, 30)];
@@ -50,12 +52,18 @@
         newButton.tag = 100 + i;
         [newButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
         
+        
         [vi1 addSubview:newButton];
     }
     
+    
     // 创建一个小的View
     self.vi = [[UIView alloc] initWithFrame:CGRectMake(self.messageView.frame.size.width / 4 - 45 , 28, 40, 2)];
+    
+    
+    
     [vi1 addSubview:self.vi];
+    
     
     //    把vi1贴到RootView上
     [self.messageView addSubview:vi1];
@@ -91,19 +99,25 @@
         self.vi.backgroundColor = [UIColor orangeColor];
     } else if (num == 1 ){
         self.vi.center = CGPointMake(self.messageView.frame.size.width / 2 - 43, 28);
+        self.vi.backgroundColor = [UIColor orangeColor];
     } else if (num == 2 ){
         self.vi.center = CGPointMake(self.messageView.frame.size.width / 4 * 3 - 43, 28);
-//        self.vi.backgroundColor = [UIColor orangeColor];
-    } else {
+        self.vi.backgroundColor = [UIColor orangeColor];
+    } else  if (num == 3 ){
         self.vi.center = CGPointMake(self.messageView.frame.size.width - 43, 28);
+        self.vi.backgroundColor = [UIColor orangeColor];
+    } else {
+        self.vi.backgroundColor = [UIColor orangeColor];
     }
     
-    //     动画结束
-    [UIView commitAnimations];
+    
     
     // 小滑块以及偏移效果
     
     self.messageView.myscrollView.contentOffset = CGPointMake(num * self.messageView.myscrollView.frame.size.width, 0);
+    
+    //     动画结束
+    [UIView commitAnimations];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

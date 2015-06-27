@@ -10,4 +10,11 @@
 
 @interface ItemModel : NSObject
 
+@property (nonatomic, retain) NSString *image;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *summary;
+@property (nonatomic, retain) NSString *insert;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dic;
+
 @end

@@ -12,7 +12,7 @@
 #import "Video.h"
 #import "Recreation.h"
 
-@interface MessageView : UIView<UITableViewDelegate, UITableViewDataSource>
+@interface MessageView : UIView<UITableViewDelegate, UITableViewDataSource, NetworkEngineDelegate>
 
 
 

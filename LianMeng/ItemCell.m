@@ -41,7 +41,9 @@
     // 依次创建 headimageView 、nameLael 、contentLabel、publishedLabel
     self.headimageView =[[EGOImageView alloc] initWithFrame:CGRectMake(kInspace, kInspace, kHeadImageWidgth, kHeadImageHeidght)];
     self.nameLael = [[UILabel alloc] initWithFrame:CGRectMake(kInspace * 2 + kHeadImageWidgth, kInspace, kNameLabelW, kNameLableH)];
-    self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(kInspace * 2 + kHeadImageWidgth, kInspace + kNameLableH, kContentLabelW, kContentLabelH)];
+    self.contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(kInspace * 2 + kHeadImageWidgth, kInspace + kNameLableH, kContentLabelW - 10, kContentLabelH)];
+    self.contentLabel.font = [UIFont systemFontOfSize:14];
+    self.contentLabel.numberOfLines = 0;
     self.publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPudlishLabelX , self.contentLabel.frame.size.height + kContentLabelH + kInspace, kPudlishLabelW, kPudlishLabelH)];
     
     [self addSubview:self.headimageView];
