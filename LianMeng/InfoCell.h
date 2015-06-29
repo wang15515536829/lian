@@ -25,6 +25,10 @@
 @property (nonatomic , retain)UILabel *duiKangLabel1;
 @property (nonatomic , retain)UILabel *duiKangLabel2;
 @property (nonatomic , retain)UILabel *duiKangLabel3;
+@property (nonatomic , retain)UILabel *tLabel;
+@property (nonatomic , retain)UILabel *sLabel;
+@property (nonatomic , retain)UILabel *dLabel;
+
 
 @property (nonatomic , retain)UIImageView *partner1;
 @property (nonatomic , retain)UILabel *partnerLabel1;

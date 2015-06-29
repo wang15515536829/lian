@@ -64,6 +64,9 @@
 //更新搜索结果
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
+    if ([searchController.searchBar.text isEqualToString:@""]) {
+        return;
+    }
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains [cd] %@", searchController.searchBar.text];
     self.searchArray = [NSArray arrayWithArray:[self.allArray filteredArrayUsingPredicate:predicate]];
     
@@ -150,8 +153,8 @@
 {
     HeroInfoViewController *heroInfo = [[HeroInfoViewController alloc] init];
     [self.navigationController pushViewController:heroInfo animated:YES];
-    heroInfo.dic = self.allArray[indexPath.row];
-    heroInfo.allArray = self.allArray;
+    heroInfo.dic = self.searchArray[indexPath.row];
+//    heroInfo.allArray = self.allArray;
     heroInfo.isAll = YES;
     [heroInfo release];
 }

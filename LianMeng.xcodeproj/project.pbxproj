@@ -36,11 +36,12 @@
 		34C14C041B3ECE450099A3CB /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C14BFC1B3ECE450099A3CB /* UIView+SDExtension.m */; };
 		34D26A311B4138FF007FD431 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A301B4138FF007FD431 /* WebViewController.m */; };
 		34D26A721B4185CB007FD431 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A711B4185CB007FD431 /* NetWork.m */; };
-		34EA0F281B40F33F00DD050E /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F1F1B40F33F00DD050E /* HeroViewController.m */; };
-		34EA0F291B40F33F00DD050E /* AllHeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F211B40F33F00DD050E /* AllHeroViewController.m */; };
-		34EA0F2A1B40F33F00DD050E /* HeroInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F231B40F33F00DD050E /* HeroInfoViewController.m */; };
-		34EA0F2B1B40F33F00DD050E /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F251B40F33F00DD050E /* InfoCell.m */; };
-		34EA0F2C1B40F33F00DD050E /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F271B40F33F00DD050E /* NetworkEngine.m */; };
+		34D26A7F1B419574007FD431 /* HeroData.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A741B419574007FD431 /* HeroData.m */; };
+		34D26A801B419574007FD431 /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A761B419574007FD431 /* HeroViewController.m */; };
+		34D26A811B419574007FD431 /* AllHeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A781B419574007FD431 /* AllHeroViewController.m */; };
+		34D26A821B419574007FD431 /* HeroInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A7A1B419574007FD431 /* HeroInfoViewController.m */; };
+		34D26A831B419574007FD431 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A7C1B419574007FD431 /* InfoCell.m */; };
+		34D26A841B419574007FD431 /* NetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D26A7E1B419574007FD431 /* NetworkEngine.m */; };
 		34EA0F351B40F73E00DD050E /* 111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34EA0F2E1B40F73E00DD050E /* 111.jpg */; };
 		34EA0F361B40F73E00DD050E /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F301B40F73E00DD050E /* SetViewController.m */; };
 		34EA0F371B40F73E00DD050E /* OpinionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34EA0F321B40F73E00DD050E /* OpinionViewController.m */; };
@@ -119,16 +120,18 @@
 		34D26A301B4138FF007FD431 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		34D26A701B4185CB007FD431 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		34D26A711B4185CB007FD431 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
-		34EA0F1E1B40F33F00DD050E /* HeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
-		34EA0F1F1B40F33F00DD050E /* HeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroViewController.m; sourceTree = "<group>"; };
-		34EA0F201B40F33F00DD050E /* AllHeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllHeroViewController.h; sourceTree = "<group>"; };
-		34EA0F211B40F33F00DD050E /* AllHeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllHeroViewController.m; sourceTree = "<group>"; };
-		34EA0F221B40F33F00DD050E /* HeroInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroInfoViewController.h; sourceTree = "<group>"; };
-		34EA0F231B40F33F00DD050E /* HeroInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroInfoViewController.m; sourceTree = "<group>"; };
-		34EA0F241B40F33F00DD050E /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
-		34EA0F251B40F33F00DD050E /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
-		34EA0F261B40F33F00DD050E /* NetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine.h; sourceTree = "<group>"; };
-		34EA0F271B40F33F00DD050E /* NetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine.m; sourceTree = "<group>"; };
+		34D26A731B419574007FD431 /* HeroData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroData.h; sourceTree = "<group>"; };
+		34D26A741B419574007FD431 /* HeroData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroData.m; sourceTree = "<group>"; };
+		34D26A751B419574007FD431 /* HeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
+		34D26A761B419574007FD431 /* HeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroViewController.m; sourceTree = "<group>"; };
+		34D26A771B419574007FD431 /* AllHeroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllHeroViewController.h; sourceTree = "<group>"; };
+		34D26A781B419574007FD431 /* AllHeroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllHeroViewController.m; sourceTree = "<group>"; };
+		34D26A791B419574007FD431 /* HeroInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroInfoViewController.h; sourceTree = "<group>"; };
+		34D26A7A1B419574007FD431 /* HeroInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroInfoViewController.m; sourceTree = "<group>"; };
+		34D26A7B1B419574007FD431 /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		34D26A7C1B419574007FD431 /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
+		34D26A7D1B419574007FD431 /* NetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkEngine.h; sourceTree = "<group>"; };
+		34D26A7E1B419574007FD431 /* NetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkEngine.m; sourceTree = "<group>"; };
 		34EA0F2E1B40F73E00DD050E /* 111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 111.jpg; sourceTree = "<group>"; };
 		34EA0F2F1B40F73E00DD050E /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		34EA0F301B40F73E00DD050E /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
@@ -238,7 +241,6 @@
 				3441E9711B3D025800E0A016 /* message */,
 				34EA0F391B40F78A00DD050E /* 攻略 */,
 				34EA0F2D1B40F6F100DD050E /* 设置 */,
-				3441E97B1B3D029800E0A016 /* Hero */,
 				3441E9751B3D028200E0A016 /* StrategyViewController.h */,
 				3441E9761B3D028200E0A016 /* StrategyViewController.m */,
 			);
@@ -249,6 +251,19 @@
 			isa = PBXGroup;
 			children = (
 				3441E9811B3D2D4D00E0A016 /* View */,
+				3441E97B1B3D029800E0A016 /* Hero */,
+				34D26A731B419574007FD431 /* HeroData.h */,
+				34D26A741B419574007FD431 /* HeroData.m */,
+				34D26A751B419574007FD431 /* HeroViewController.h */,
+				34D26A761B419574007FD431 /* HeroViewController.m */,
+				34D26A771B419574007FD431 /* AllHeroViewController.h */,
+				34D26A781B419574007FD431 /* AllHeroViewController.m */,
+				34D26A791B419574007FD431 /* HeroInfoViewController.h */,
+				34D26A7A1B419574007FD431 /* HeroInfoViewController.m */,
+				34D26A7B1B419574007FD431 /* InfoCell.h */,
+				34D26A7C1B419574007FD431 /* InfoCell.m */,
+				34D26A7D1B419574007FD431 /* NetworkEngine.h */,
+				34D26A7E1B419574007FD431 /* NetworkEngine.m */,
 			);
 			name = message;
 			sourceTree = "<group>";
@@ -256,16 +271,6 @@
 		3441E97B1B3D029800E0A016 /* Hero */ = {
 			isa = PBXGroup;
 			children = (
-				34EA0F1E1B40F33F00DD050E /* HeroViewController.h */,
-				34EA0F1F1B40F33F00DD050E /* HeroViewController.m */,
-				34EA0F201B40F33F00DD050E /* AllHeroViewController.h */,
-				34EA0F211B40F33F00DD050E /* AllHeroViewController.m */,
-				34EA0F221B40F33F00DD050E /* HeroInfoViewController.h */,
-				34EA0F231B40F33F00DD050E /* HeroInfoViewController.m */,
-				34EA0F241B40F33F00DD050E /* InfoCell.h */,
-				34EA0F251B40F33F00DD050E /* InfoCell.m */,
-				34EA0F261B40F33F00DD050E /* NetworkEngine.h */,
-				34EA0F271B40F33F00DD050E /* NetworkEngine.m */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -498,33 +503,34 @@
 				3441E98D1B3D2F0F00E0A016 /* Recreation.m in Sources */,
 				3441E9701B3D024C00E0A016 /* MessageViewController.m in Sources */,
 				3441E99D1B3D4A0400E0A016 /* EGOImageView.m in Sources */,
+				34D26A801B419574007FD431 /* HeroViewController.m in Sources */,
 				3441E9A11B3D4C2100E0A016 /* ItemCell.m in Sources */,
 				34C14C041B3ECE450099A3CB /* UIView+SDExtension.m in Sources */,
 				3441E94F1B3D014D00E0A016 /* AppDelegate.m in Sources */,
 				34C14BFF1B3ECE450099A3CB /* TAAnimatedDotView.m in Sources */,
+				34D26A811B419574007FD431 /* AllHeroViewController.m in Sources */,
 				34C14C031B3ECE450099A3CB /* SDCycleScrollView.m in Sources */,
 				3441E99B1B3D4A0400E0A016 /* EGOImageLoadConnection.m in Sources */,
+				34D26A821B419574007FD431 /* HeroInfoViewController.m in Sources */,
+				34D26A7F1B419574007FD431 /* HeroData.m in Sources */,
 				3441E98A1B3D2EAB00E0A016 /* Video.m in Sources */,
 				34C14C011B3ECE450099A3CB /* TAPageControl.m in Sources */,
 				3441E9871B3D2E8D00E0A016 /* Competition.m in Sources */,
-				34EA0F291B40F33F00DD050E /* AllHeroViewController.m in Sources */,
 				3441E9A81B3D50B900E0A016 /* NetworkEngine1.m in Sources */,
-				34EA0F2C1B40F33F00DD050E /* NetworkEngine.m in Sources */,
 				34C14BFD1B3ECE450099A3CB /* NSData+SDDataCache.m in Sources */,
 				3441E99C1B3D4A0400E0A016 /* EGOImageLoader.m in Sources */,
 				34EA0F3F1B40F7D000DD050E /* InfoViewController.m in Sources */,
 				34EA0F381B40F73E00DD050E /* AboutUsViewController.m in Sources */,
 				3441E97F1B3D2C9000E0A016 /* MessageView.m in Sources */,
 				34EA0F371B40F73E00DD050E /* OpinionViewController.m in Sources */,
+				34D26A841B419574007FD431 /* NetworkEngine.m in Sources */,
 				3441E9991B3D4A0400E0A016 /* EGOCache.m in Sources */,
 				3441E99A1B3D4A0400E0A016 /* EGOImageButton.m in Sources */,
+				34D26A831B419574007FD431 /* InfoCell.m in Sources */,
 				34EA0F361B40F73E00DD050E /* SetViewController.m in Sources */,
-				34EA0F2B1B40F33F00DD050E /* InfoCell.m in Sources */,
-				34EA0F281B40F33F00DD050E /* HeroViewController.m in Sources */,
 				34C14C001B3ECE450099A3CB /* TADotView.m in Sources */,
 				34EA0F3E1B40F7D000DD050E /* RootViewController.m in Sources */,
 				3441E94C1B3D014D00E0A016 /* main.m in Sources */,
-				34EA0F2A1B40F33F00DD050E /* HeroInfoViewController.m in Sources */,
 				34D26A721B4185CB007FD431 /* NetWork.m in Sources */,
 				34C14C021B3ECE450099A3CB /* SDCollectionViewCell.m in Sources */,
 			);

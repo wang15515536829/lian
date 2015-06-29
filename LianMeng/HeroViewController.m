@@ -20,6 +20,7 @@
 
 @property (nonatomic , retain)NSDictionary *dicData;
 @property (nonatomic , retain)NSArray *mHeroArray;
+@property (nonatomic, retain) NetworkEngine *engine1;
 
 
 @end
@@ -52,6 +53,12 @@
     
     [self getDataFromURL];
     
+    // 获取所有英雄详细信息的方法
+    [self getAllHerosDataFromURL];
+    
+    // 设置导航控制器上面的渲染颜色（navigationBar上面的按钮的title的颜色）
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
 }
 
 #pragma mark - 请求数据
@@ -61,21 +68,37 @@
     [engine start];
 }
 
+#pragma mark - 请求全部英雄详细数据
+- (void)getAllHerosDataFromURL
+{
+    self.engine1 = [NetworkEngine netWorhEngineWithURL:[NSURL URLWithString:kAllHeroURL] params:nil delegate:self];
+    [self.engine1 start];
+}
+
 #pragma mark - 数据请求成功的代理方法
 - (void)netWorkDidFinishLoading:(NetworkEngine *)engine withInfo:(NSData *)data
 {
-    NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSString *str = [strData stringByReplacingOccurrencesOfString:@"if(!LOLherojs)var LOLherojs={};LOLherojs.free={" withString:@"{"];
-    NSLog(@"%ld" , str.length);
-    NSString *newStr = [str substringToIndex:str.length - 1];
-//    NSLog(@"%@" , newStr);
-    NSData *data1 = [newStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data1 options:NSJSONReadingMutableContainers error:nil];
-    
-    self.mHeroArray = [dic[@"keys"] allValues];
-    self.dicData = dic[@"data"];
-    
-    [self.tableView reloadData];
+    if ([engine isEqual:self.engine1]) {
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
+        HeroData *heros = [HeroData shareHeroData];
+        heros.array = (NSMutableArray *)array;
+        NSLog(@"!%@", heros.array);
+    } else {
+        NSString *strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSString *str = [strData stringByReplacingOccurrencesOfString:@"if(!LOLherojs)var LOLherojs={};LOLherojs.free={" withString:@"{"];
+        NSLog(@"%ld" , str.length);
+        NSString *newStr = [str substringToIndex:str.length - 1];
+        //    NSLog(@"%@" , newStr);
+        NSData *data1 = [newStr dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data1 options:NSJSONReadingMutableContainers error:nil];
+        
+        self.mHeroArray = [dic[@"keys"] allValues];
+        self.dicData = dic[@"data"];
+        
+        [self.tableView reloadData];
+        
+    }
     
 }
 
@@ -141,8 +164,12 @@
 - (void)dealloc
 {
     [_tableView release];
+    [_engine1 release];
     [super dealloc];
 }
+
+
+
 
 
 

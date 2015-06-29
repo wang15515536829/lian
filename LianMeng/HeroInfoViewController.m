@@ -43,8 +43,10 @@
         self.navigationItem.title = self.dic[@"name"];
     }
     
+    HeroData *aaaaa = [HeroData shareHeroData];
+    self.allArray = aaaaa.array;
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kViewWeight, 1000) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kViewWeight, self.view.frame.size.height) style:UITableViewStyleGrouped];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
@@ -83,7 +85,7 @@
 #pragma mark - tableView代理方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,15 +105,33 @@
     cell.duiKangLabel2.text = self.dicData[@"ag_skill2"];
     cell.duiKangLabel3.text = self.dicData[@"ag_skill3"];
     
-//    NSString *str1 = [NSString string];
-//    if (self.dicData != nil) {
-//        for (NSDictionary *smallDic in self.allArray) {
-//        if ([(NSString *)smallDic[@"id"] isEqualToString:self.dicData[@"best_partner1"]]) {
-//                str1 = smallDic[@"en_name"];
-//            }
-//        }
-//    }
-//    cell.partner1.image = [UIImage imageNamed:str1];
+    NSString *str1 = [NSString string];
+    NSString *str2 = [NSString string];
+    NSString *str3 = [NSString string];
+    NSString *str4 = [NSString string];
+    for (NSDictionary *smallDic in self.allArray) {
+        NSString *str = [NSString stringWithFormat:@"%@",smallDic[@"id"]];
+        if ([str isEqualToString:self.dicData[@"best_partner1"]]) {
+            str1 = smallDic[@"en_name"];
+        }
+        if ([str isEqualToString:self.dicData[@"best_partner2"]]) {
+            str2 = smallDic[@"en_name"];
+        }
+        if ([str isEqualToString:self.dicData[@"strongest_opponent1"]]) {
+            str3 = smallDic[@"en_name"];
+        }
+        if ([str isEqualToString:self.dicData[@"strongest_opponent2"]]) {
+            str4 = smallDic[@"en_name"];
+        }
+    }
+    
+    
+    
+    cell.partner1.image = [UIImage imageNamed:str1];
+    cell.partner2.image = [UIImage imageNamed:str2];
+    cell.opponent1.image = [UIImage imageNamed:str3];
+    cell.opponent2.image = [UIImage imageNamed:str4];
+    
     cell.partnerLabel1.text = self.dicData[@"partner_reason1"];
     
     cell.storyLabel.text = self.dicData[@"story"];
@@ -174,7 +194,13 @@
 //改变cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 363;
+//return 363;
+    if (indexPath.row == 0) {
+        return 500;
+    }else{
+        return 10;
+    }
+    return 500;
 }
 
 //改变区头高度

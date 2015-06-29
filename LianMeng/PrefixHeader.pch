@@ -40,6 +40,7 @@
 
 #import "TAPageControl.h"
 
+#import "HeroData.h"
 #import "NetWork.h"
 
 
