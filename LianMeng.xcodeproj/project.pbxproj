@@ -239,6 +239,7 @@
 				34D26A2F1B4138FF007FD431 /* WebViewController.h */,
 				34D26A301B4138FF007FD431 /* WebViewController.m */,
 				3441E9711B3D025800E0A016 /* message */,
+				3441E97B1B3D029800E0A016 /* Hero */,
 				34EA0F391B40F78A00DD050E /* 攻略 */,
 				34EA0F2D1B40F6F100DD050E /* 设置 */,
 				3441E9751B3D028200E0A016 /* StrategyViewController.h */,
@@ -251,7 +252,13 @@
 			isa = PBXGroup;
 			children = (
 				3441E9811B3D2D4D00E0A016 /* View */,
-				3441E97B1B3D029800E0A016 /* Hero */,
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
+		3441E97B1B3D029800E0A016 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
 				34D26A731B419574007FD431 /* HeroData.h */,
 				34D26A741B419574007FD431 /* HeroData.m */,
 				34D26A751B419574007FD431 /* HeroViewController.h */,
@@ -264,13 +271,6 @@
 				34D26A7C1B419574007FD431 /* InfoCell.m */,
 				34D26A7D1B419574007FD431 /* NetworkEngine.h */,
 				34D26A7E1B419574007FD431 /* NetworkEngine.m */,
-			);
-			name = message;
-			sourceTree = "<group>";
-		};
-		3441E97B1B3D029800E0A016 /* Hero */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = Hero;
 			sourceTree = "<group>";
