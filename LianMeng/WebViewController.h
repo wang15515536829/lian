@@ -1,13 +1,13 @@
 //
-//  HearViewController.h
+//  WebViewController.h
 //  LianMeng
 //
-//  Created by lanouhn on 15/6/26.
+//  Created by lanouhn on 15/6/29.
 //  Copyright (c) 2015年 lanouhn3g - 23 .com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HearViewController : UIViewController
+@interface WebViewController : UIViewController
 
 @end

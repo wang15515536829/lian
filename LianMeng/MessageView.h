@@ -11,8 +11,10 @@
 #import "Competition.h"
 #import "Video.h"
 #import "Recreation.h"
+#import "AppDelegate.h"
+#import "WebViewController.h"
 
-@interface MessageView : UIView<UITableViewDelegate, UITableViewDataSource, NetworkEngineDelegate>
+@interface MessageView : UIView<UITableViewDelegate, UITableViewDataSource, NetworkEngineDelegate, NetworkDelegate>
 
 
 
@@ -30,5 +32,12 @@
 @property (nonatomic , retain) NSMutableArray *imageurls;
 
 @property (nonatomic, retain) UIView *vi;
+
+@property (nonatomic, retain) NetworkEngine1 *engin1;
+@property (nonatomic, retain) NetworkEngine1 *en;
+@property (nonatomic, retain) NSMutableArray *enArray;
+
+// web
+@property (nonatomic, retain) UIWebView *webView;
 
 @end

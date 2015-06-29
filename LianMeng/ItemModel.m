@@ -21,6 +21,7 @@
             self.insert = dic[@"insert_date"];
             self.article_id = dic[@"article_id"];
             self.channel_desc = dic[@"channel_desc"];
+            self.article_url= dic[@"article_url"];
         }
     }
     return self;

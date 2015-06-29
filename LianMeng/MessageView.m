@@ -86,38 +86,99 @@
     
     // 请求数据
     [self getDataFromUrl];
+    
+    
+    // web请求数据
+    
+}
+#pragma mark - web请求数据
+- (void)getDataFromWebUrl
+{
+    
+    NetWork *eng = [NetWork netWork2EngineWithURL:[NSURL URLWithString:@"http://qt.qq.com/static/pages/news/phone/95/article_9095.shtml?APP_BROWSER_VERSION_CODE=1&ios_version=523&imgmode=auto"] params:nil delegate:self];
+    [eng start];
+    
+    
+}
+- (void) netWorkDid2FinishLoading:(NetWork *)engine withInfo:(NSData *)data
+{
+    NSString *strda = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSRange range1 = [strda rangeOfString:@"未安装"];
+    NSRange range2 = [strda rangeOfString:@"location.href=QTLshare.DownLoadAPP"];
+    NSMutableString *str = [NSMutableString stringWithString:strda];
+    NSLog(@"%ld" , range1.location);
+    
+    [str replaceCharactersInRange:NSMakeRange(range1.location - 3, range2.location - range1.location + 5) withString:@""];
+    NSString *strt = [NSString stringWithString:str];
+    
+    NSLog(@"%@", strt);
+    [self.webView loadHTMLString:strt baseURL:nil];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"^^^^^^^^^^^^");
+    //    ItemModel *model = [self.array objectAtIndex:indexPath.row];
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    WebViewController *webVC = [[WebViewController alloc] init];
+    
+    self.webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
+    
+    [webVC.view addSubview:self.webView];
+    [app.megssage pushViewController:webVC animated:YES];
+    [self getDataFromWebUrl];
 }
 #pragma mark - 请求数据
 - (void)getDataFromUrl
 {
-    NetworkEngine1 *engin1 = [NetworkEngine1 netWorkEngineWithURL:[NSURL URLWithString:kNewURL] params:nil delegate:self];
-    [engin1 start];
-
-    NetworkEngine1 *en = [NetworkEngine1 netWorkEngineWithURL: [NSURL URLWithString:kTuijian]params:nil delegate:self];
-    [en start];
+    self.engin1 = [NetworkEngine1 netWorkEngineWithURL:[NSURL URLWithString:kNewURL] params:nil delegate:self];
+    [self.engin1 start];
+    NSLog(@"!!!!!!%@" ,self.engin1);
+    self.en = [NetworkEngine1 netWorkEngineWithURL: [NSURL URLWithString:kTuijian]params:nil delegate:self];
+    [self.en start];
+    
+    
 }
 #pragma  mark - 请求数据成功的方法
 - (void)netWorkDidFinishLoading:(NetworkEngine1 *)engine withInfo:(NSData *)data
 {
-    // 解析
-    NSError *error = nil;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
-    NSLog(@"error%@" , error);
     
-    NSArray *listArray = [dic objectForKey:@"list"];
+   
     
-    for (NSDictionary *listDic in listArray) {
-        NSLog(@"*********");
-        ItemModel *list = [[ItemModel alloc] initWithDictionary:listDic];
-        [self.array addObject:list];
+    if ([engine isEqual:self.engin1]) {
+        // 解析
+        NSError *error = nil;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+        NSLog(@"error%@" , error);
+        
+        NSArray *listArray = [dic objectForKey:@"list"];
+        
+        for (NSDictionary *listDic in listArray) {
+            NSLog(@"*********");
+            ItemModel *list = [[ItemModel alloc] initWithDictionary:listDic];
+            [self.array addObject:list];
+        }
+//        for (int i = (int)(self.array.count - 4); i < self.array.count ; i++) {
+//            ItemModel *model = self.array[i];
+//            NSString *imageurl = model.image;
+//            [self.imageurls addObject:imageurl];
+//        }
+        NSLog(@"------------");
+        [self.tableView reloadData];
+    } else if ([engine isEqual:self.en]){
+        NSError *error = nil;
+        NSDictionary *dic1 = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+        NSArray *list1Array = [dic1 objectForKey:@"list"];
+        for (NSDictionary *list1Dic in list1Array) {
+            ItemModel *list1 = [[ItemModel alloc] initWithDictionary:list1Dic];
+            [self.enArray addObject:list1];
+        }
+        
+        [self.tableView reloadData];
     }
-    for (int i = (int)(self.array.count - 4); i < self.array.count ; i++) {
-        ItemModel *model = self.array[i];
-        NSString *imageurl = model.image;
-        [self.imageurls addObject:imageurl];
-    }
-    NSLog(@"------------");
-    [self.tableView reloadData];
+    
+  
 }
 - (NSMutableArray *)imageurls
 {
@@ -155,16 +216,7 @@
         cell = [[ItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
         
     }
-    
-
-    
-    
     ItemModel *model = [self.array objectAtIndex:indexPath.row];
-
-//    if ([model.channel_desc isEqualToString:@"推荐"]) {
-//        ;
-//    } else {
-    // title
     cell.nameLael.text = model.title;
 
     // content
@@ -180,7 +232,7 @@
     
     // 内容图片
     cell.headimageView.imageURL = [NSURL URLWithString:model.image];
-//    }
+
     return cell;
     
     
@@ -213,25 +265,7 @@
     SliderScrollView.pagingEnabled = YES;
     SliderScrollView.delegate = self;
     
-//    UIView *vi = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
-    
-    
-//    self.imageView.imageURL = [NSURL URLWithString:<#(NSString *)#>]
-//    ItemModel *model = (ItemModel *)[self.array objectAtIndex:section.]
-//    ItemCell *cell = [[ItemCell alloc] init];
-    
-//    ItemModel *model = [[ItemModel alloc] init];
-//    if ([model.channel_desc isEqualToString:@"推荐"]) {
-//        <#statements#>
-//    }
-//    
-//    EGOImageView *imageView1 = [[EGOImageView alloc]init];
-//    if (self.imageurls.count != 0) {
-//        NSString *url1 = self.imageurls[0];
-//        imageView1.imageURL = [NSURL URLWithString:url1];
-//        [vi addSubview:imageView1];
-//    }
-//    self.vi = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.frame.size.width*4, 200) imageURLsGroup:self.imageurls];
+
     [self.tableView.tableHeaderView addSubview:self.vi];
     
     

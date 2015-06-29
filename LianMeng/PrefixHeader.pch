@@ -28,11 +28,19 @@
 #import "UIView+SDExtension.h"
 
 
+#define kAllHeroURL @"http://ossweb-img.qq.com/upload/qqtalk/lol_hero/hero_list.js"
+#define kMHeroURL @"http://lol.qq.com/biz/hero/free.js"
+
+
+
+#import "NetworkEngine.h"
+
 
 
 
 #import "TAPageControl.h"
 
+#import "NetWork.h"
 
 
 #import "NetworkEngine1.h"
@@ -40,6 +48,8 @@
 #define kNewURL @"http://qt.qq.com/static/pages/news/phone/c12_list_1.shtml"
 #define kTuijian @"http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml"
 #define kSaishi @"http://qt.qq.com/static/pages/news/phone/c73_list_1.shtml"
+
+#define kSais @"http://qt.qq.com/static/pages/news/phone/96/article_9096.shtml?APP_BROWSER_VERSION_CODE=1&ios_version=523&imgmode=auto"
 #define kShiping @"http://qt.qq.com/static/pages/news/phone/c11_list_1.shtml"
 #define kYule @"http://qt.qq.com/static/pages/news/phone/c18_list_1.shtml"
 

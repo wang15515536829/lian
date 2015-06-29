@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MessageViewController.h"
-#import "HearViewController.h"
-#import "StrategyViewController.h"
+#import "HeroViewController.h"
+#import "RootViewController.h"
 #import "SetViewController.h"
 @interface AppDelegate ()
 
@@ -25,19 +25,19 @@
     [self.window makeKeyAndVisible];
     // 资讯
     MessageViewController *megssageVC = [[MessageViewController alloc] init];
-    UINavigationController *megssage = [[UINavigationController alloc] initWithRootViewController:megssageVC];
-    megssage.tabBarItem.title = @"资讯";
+    self.megssage = [[UINavigationController alloc] initWithRootViewController:megssageVC];
+    self.megssage.tabBarItem.title = @"资讯";
     
     
     // 英雄
-    HearViewController *hearVC = [[HearViewController alloc] init];
+    HeroViewController *hearVC = [[HeroViewController alloc] init];
     UINavigationController *hear = [[UINavigationController alloc] initWithRootViewController:hearVC];
     hear.tabBarItem.title = @"英雄";
     
     // 策略
-    StrategyViewController *strateVC = [[StrategyViewController alloc] init];
-    UINavigationController *strategy = [[UINavigationController alloc] initWithRootViewController:strateVC];
-    strategy.tabBarItem.title = @"策略";
+    RootViewController *rootVC = [[RootViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    nav.tabBarItem.title = @"攻略";
     
     // 设置
     SetViewController *setVC = [[SetViewController alloc] init];
@@ -49,7 +49,7 @@
     
     // tabbar
     UITabBarController *tabbar = [[UITabBarController alloc] init];
-    NSArray *array = @[megssage, hear, strategy, set];
+    NSArray *array = @[self.megssage, hear, nav, set];
     tabbar.viewControllers = array;
     tabbar.tabBar.translucent = NO;
     self.window.rootViewController = tabbar;

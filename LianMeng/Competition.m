@@ -44,6 +44,8 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"error%@" , error);
     
+//    NSString *strData = [NSString ]
+    
     NSArray *listArray = [dic objectForKey:@"list"];
     
     for (NSDictionary *listDic in listArray) {

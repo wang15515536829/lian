@@ -1,21 +1,22 @@
 //
-//  HearViewController.m
+//  WebViewController.m
 //  LianMeng
 //
-//  Created by lanouhn on 15/6/26.
+//  Created by lanouhn on 15/6/29.
 //  Copyright (c) 2015年 lanouhn3g - 23 .com. All rights reserved.
 //
 
-#import "HearViewController.h"
+#import "WebViewController.h"
 
-@interface HearViewController ()
+@interface WebViewController ()
 
 @end
 
-@implementation HearViewController
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
